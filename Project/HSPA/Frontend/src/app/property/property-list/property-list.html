@@ -1,0 +1,11 @@
+    <!-- <pre>{{ properties | json }}</pre> -->
+<!-- <h1>PROPERTY LIST WORKING</h1> -->
+<div class="row">
+    <div *ngFor="let property of properties; trackBy: trackById" class="shadow-lg col-sm-4 p-3">
+<!-- <div *ngFor="let property of properties$ | async; trackBy: trackById" class="shadow-lg col-sm-4 p-3"> -->
+
+<!-- <div>{{ property | json }}</div>         -->
+<!-- <app-property-card [property] = "property"></app-property-card> -->
+ <app-property-card *ngIf="property" [property]="property"></app-property-card>
+    </div>
+</div> 

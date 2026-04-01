@@ -1,0 +1,38 @@
+[
+    {
+        "Id":1,
+        "Name": "Antellia",
+        "Type":"House",
+        "Price": 100000000
+    },
+    {
+        "Id":2,
+        "Name": "Suman",
+        "Type":"Building",
+        "Price": 4000000
+    },
+    {
+        "Id":3,
+        "Name": "Pratham Nivas",
+        "Type":"PG",
+        "Price": 2000
+    },
+    {
+        "Id":4,
+        "Name": "Kumar",
+        "Type":"Mall",
+        "Price": 190000000
+    },
+    {
+        "Id":5,
+        "Name": "Kirthi",
+        "Type":"House",
+        "Price": 8000
+    },
+    {
+        "Id":6,
+        "Name": "Prabhas",
+        "Type":"House",
+        "Price": 7500000
+    }
+]
