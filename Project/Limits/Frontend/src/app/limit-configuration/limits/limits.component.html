@@ -1,0 +1,134 @@
+<div>
+
+  <h1>Limits Configurations</h1>
+
+  <!-- <p>
+    limits works!
+  </p> -->
+
+  <div>
+    <h5>
+      Search/ Select Limits 
+    </h5>
+  </div>
+
+  <div>
+
+    <table>
+      <tr>
+        <td>
+          <div>
+            
+            <label>Product Type: <span class="required">*</span></label>
+            <!-- <input type="text"> -->
+            <select [(ngModel)]="productType" required>
+              <option value=""> - Please select product type - </option>
+              <option value="DTA">DTA</option>
+              <option value="DTW">DTW</option>
+            </select>
+            <!-- <button (click)="getProductType()">Get Product Details</button> -->
+          </div>
+        </td>
+
+        <td>      
+          <div>
+            <h6>
+              From Country:<span class="required">*</span>
+            </h6>
+
+            <select [(ngModel)]="sendCountry">
+              <option value="">- Please select send country -</option>
+              <option value="AE">AE</option>
+              <option value="US">US</option>
+              <option value="IN">IN</option>
+            </select>
+            <!-- <input type="text">
+            <button (click)="getSendCountry()">Get Send Country</button> -->
+          </div> 
+        </td>
+
+        <td>
+          <div>
+            <h6>
+              To Country:<span class="required">*</span>
+            </h6>
+
+            <select [(ngModel)]="receiveCountry">
+              <option value="">- Please select receive country -</option>
+              <option value="BD">BD</option>
+              <option value="IN">IN</option>
+            </select>
+            <!-- <input type="text">
+            <button (click)="getReceiveCountry()">Get Receive Country</button> -->
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+
+        </td>
+        <td>
+          <div>
+            <h6>
+              Send Clients:
+            </h6>
+            
+            <select [(ngModel)]="sendClient">
+              <option value="">- Please select send client -</option>
+              <option value="AL FAUD">AL FAUD</option>
+              <option value="AL AHALIA">AL AHALIA</option>
+            </select>
+            <!-- <input type="text">
+            <button (click)="getSendClient()">Get Send Client</button> -->
+          </div>
+        </td>
+        <td>
+          <div>
+            <h6>
+              Receive Clients:
+            </h6>
+
+            <select [(ngModel)]="receiveClient">
+              <option value=""> - Please select receive client- </option>
+              <option value="SIB">SIB</option>
+              <option value="BKASH">BKASH</option>
+            </select>
+            <!-- <input type="text">
+            <button (click)="getReceiveClient()">Get Receice Client</button> -->
+          </div>
+        </td>
+      </tr>
+    </table>
+
+    <button (click)="addData()" class="btn btn-primary">Add data</button>
+    <button (click)="getReceiveClient()" class="btn btn-primary">Search</button>
+    <button (click)="clearData()" class="btn btn-primary">Clear</button>
+
+    <hr>
+
+
+    <table border="1">
+      <tr>
+        <th>Product Type</th>
+        <th>From Country</th>
+        <th>Send Client</th>
+        <!-- <th>Send Currency</th> -->
+        <th>To Country</th>
+        <th>Receive Client</th>
+        <!-- <th>Receive Currency</th> -->
+      </tr>
+      <tr *ngFor="let item of dataList">
+        <td>{{item.productType}}</td>
+        <td>{{item.sendCountry}}</td>
+        <td>{{item.sendClient}}</td>
+        <td>{{item.receiveCountry}}</td>
+        <td>{{item.receiveClient}}</td>
+      </tr>
+    </table>
+
+  </div>
+
+
+</div>
+

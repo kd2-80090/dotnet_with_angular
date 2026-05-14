@@ -1,0 +1,30 @@
+table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+td {
+  padding: 10px;
+  vertical-align: top;
+}
+
+td div {
+  display: grid;
+  grid-template-columns: 160px 1fr; /* fixed label width */
+  align-items: center;
+  gap: 8px;
+}
+
+h6 {
+  margin: 0;
+  font-size: 13px;
+}
+
+select {
+  width: 140px;
+}
+
+.required {
+  color: red;
+  margin-left: 2px;
+}

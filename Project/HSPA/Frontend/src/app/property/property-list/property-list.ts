@@ -6,6 +6,7 @@ import { Property } from '../../models/property';
 import { Observable } from 'rxjs';
 import { ChangeDetectorRef } from '@angular/core';
 import { IProperty } from '../IProperty.interface';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-property-list',
@@ -16,25 +17,30 @@ import { IProperty } from '../IProperty.interface';
 })
 export class PropertyList implements OnInit {
 
+  SellRent=1;
   // properties$!: Observable<Property[]>;
     properties: Array<IProperty>= [];
 
   constructor(
+    private route: ActivatedRoute,
     private housingService: HousingService,
     private cd: ChangeDetectorRef
   ) { }
 
   ngOnInit(): void {
 
+    if(this.route.snapshot.url.toString()) {
+      this.SellRent = 2;
+    }
       // this.properties$ = this.housingService.GetAllProperties();
       // this.properties = this.housingService.GetAllProperties();
 
-    this.housingService.GetAllProperties().subscribe(
+    this.housingService.GetAllProperties(this.SellRent).subscribe(
       data => {
         console.log('API DATA:', data);
         this.properties = data || [];
         console.log('ASSIGNED:', this.properties);
-
+        console.log(this.route.snapshot.url.toString())
         this.cd.detectChanges(); // ✅ FORCE UI UPDATE
 
       },

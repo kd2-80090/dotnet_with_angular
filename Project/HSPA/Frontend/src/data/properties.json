@@ -1,38 +1,57 @@
 [
     {
         "Id":1,
+        "SellRent":2,
         "Name": "Antellia",
         "Type":"House",
-        "Price": 100000000
+        "Price": 100000000,
+        "Image": "house0"
     },
     {
         "Id":2,
+        "SellRent":2,
         "Name": "Suman",
         "Type":"Building",
-        "Price": 4000000
+        "Price": 4000000,
+        "Image": "house"
     },
     {
         "Id":3,
+        "SellRent":1,
         "Name": "Pratham Nivas",
         "Type":"PG",
-        "Price": 2000
+        "Price": 2000,
+        "Image": "house1"
     },
     {
         "Id":4,
+        "SellRent":2,
         "Name": "Kumar",
         "Type":"Mall",
-        "Price": 190000000
+        "Price": 190000000,
+        "Image": "house2"
     },
     {
         "Id":5,
+        "SellRent":1,
         "Name": "Kirthi",
         "Type":"House",
-        "Price": 8000
+        "Price": 8000,
+        "Image": "house3"
     },
     {
         "Id":6,
+        "SellRent":1,
         "Name": "Prabhas",
         "Type":"House",
-        "Price": 7500000
+        "Price": 7500000,
+        "Image": "house4"
+    },
+    {
+        "Id":7,
+        "SellRent":1,
+        "Name": "Sudha",
+        "Type":"House",
+        "Price": 300000
     }
 ]

@@ -1,0 +1,76 @@
+<h2>Send Limit Configuration</h2>
+
+<form class="form">
+
+  <div class="row">
+
+    <div class="form-group col-md-4">
+      <label>Product Type <span class="required">*</span></label>
+      <input type="text" [(ngModel)]="form.productType">
+    </div>
+
+    <div class="form-group col-md-4">
+      <label>Send Country <span class="required">*</span></label>
+      <input type="text" [(ngModel)]="form.sendCountryCode">
+    </div>
+
+    <div class="form-group col-md-4">
+      <label>Send Currency <span class="required">*</span></label>
+      <input type="text" [(ngModel)]="form.sendCurrencyCode">
+    </div>
+
+    <div class="form-group col-md-4">
+      <label>Receive Country <span class="required">*</span></label>
+      <input type="text" [(ngModel)]="form.receiveCountryCode">
+    </div>
+
+    <div class="form-group col-md-4">
+      <label>Receive Currency <span class="required">*</span></label>
+      <input type="text" [(ngModel)]="form.receiveCurrencyCode">
+    </div>
+
+    <div class="form-group col-md-4">
+      <label>Min Limit <span class="required">*</span></label>
+      <input type="number" [(ngModel)]="form.minTransactionLimit">
+    </div>
+
+    <div class="form-group col-md-4">
+      <label>Max Limit <span class="required">*</span></label>
+      <input type="number" [(ngModel)]="form.maxTransactionLimit">
+    </div>
+
+    <div class="form-group col-md-4">
+      <label>Active</label>
+      <input type="checkbox" [(ngModel)]="form.isActive">
+    </div>
+
+  </div>
+
+  <button (click)="save()">Save</button>
+
+</form>
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Product</th>
+      <th>Send Country</th>
+      <th>Receive Country</th>
+      <th>Min</th>
+      <th>Max</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let item of sendLimits">
+      <td>{{item.productType}}</td>
+      <td>{{item.sendCountryCode}}</td>
+      <td>{{item.receiveCountryCode}}</td>
+      <td>{{item.minTransactionLimit}}</td>
+      <td>{{item.maxTransactionLimit}}</td>
+      <td>{{item.isActive ? 'Active' : 'Inactive'}}</td>
+    </tr>
+  </tbody>
+</table>

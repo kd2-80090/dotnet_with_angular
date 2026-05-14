@@ -1,0 +1,50 @@
+<div class="limits-container">
+
+  <h1>Limits Configurations</h1>
+  <p>limits works!</p>
+
+  <div class="limits-search">
+    <h5>Search / Select Limits</h5>
+
+    <div class="limits-grid">
+
+      <div class="limit-card">
+        <h6>Select Product Type</h6>
+        <!-- <input type="text" placeholder="Enter product type">
+        <button (click)="getProductType()">Get Product Details</button> -->
+
+        <select [(ngModel)]="productType">
+              <option value=""> - Please select product type - </option>
+              <option value="DTA">DTA</option>
+              <option value="DTW">DTW</option>
+            </select>
+      </div>
+
+      <div class="limit-card">
+        <h6>Select Send Country</h6>
+        <input type="text" placeholder="Enter send country">
+        <button (click)="getSendCountry()">Get Send Country</button>
+      </div>
+
+      <div class="limit-card">
+        <h6>Select Receive Country</h6>
+        <input type="text" placeholder="Enter receive country">
+        <button (click)="getReceiveCountry()">Get Receive Country</button>
+      </div>
+
+      <div class="limit-card">
+        <h6>Select Send Client</h6>
+        <input type="text" placeholder="Enter send client">
+        <button (click)="getSendClient()">Get Send Client</button>
+      </div>
+
+      <div class="limit-card">
+        <h6>Select Receive Client</h6>
+        <input type="text" placeholder="Enter receive client">
+        <button (click)="getReceiveClient()">Get Receive Client</button>
+      </div>
+
+    </div>
+  </div>
+
+</div>

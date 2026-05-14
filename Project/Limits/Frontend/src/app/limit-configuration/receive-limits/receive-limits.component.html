@@ -1,0 +1,67 @@
+<h2>Receive Limit Configuration</h2>
+
+<form>
+
+  <div class="row">
+
+    <div class="form-group col-md-4">
+      <label>Product Type <span class="required">*</span></label>
+      <input type="text" [(ngModel)]="form.productType">
+    </div>
+
+    <div class="form-group col-md-4">
+      <label>Country <span class="required">*</span></label>
+      <input type="text" [(ngModel)]="form.countryCode">
+    </div>
+
+    <div class="form-group col-md-4">
+      <label>Currency <span class="required">*</span></label>
+      <input type="text" [(ngModel)]="form.currencyCode">
+    </div>
+
+    <div class="form-group col-md-4">
+      <label>Min Limit <span class="required">*</span></label>
+      <input type="number" [(ngModel)]="form.minTransactionLimit">
+    </div>
+
+    <div class="form-group col-md-4">
+      <label>Max Limit <span class="required">*</span></label>
+      <input type="number" [(ngModel)]="form.maxTransactionLimit">
+    </div>
+
+    <div class="form-group col-md-4">
+      <label>Active</label>
+      <input type="checkbox" [(ngModel)]="form.isActive">
+    </div>
+
+  </div>
+
+  <button (click)="save()">Save</button>
+
+</form>
+
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Product</th>
+      <th>Country</th>
+      <th>Currency</th>
+      <th>Min</th>
+      <th>Max</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let item of receiveLimits">
+      <td>{{item.productType}}</td>
+      <td>{{item.countryCode}}</td>
+      <td>{{item.currencyCode}}</td>
+      <td>{{item.minTransactionLimit}}</td>
+      <td>{{item.maxTransactionLimit}}</td>
+      <td>{{item.isActive ? 'Active' : 'Inactive'}}</td>
+    </tr>
+  </tbody>
+</table>
